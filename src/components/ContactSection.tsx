@@ -1,4 +1,5 @@
 import * as motion from "framer-motion/client";
+import { revealInViewMotion } from "@/utils/animations";
 
 import Link from "next/link";
 
@@ -9,14 +10,9 @@ const ContactSection = () => {
       className="flex items-center justify-center sm:grid sm:grid-cols-2 w-full h-full bg-background"
     >
       <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{
-          opacity: 1,
-          transition: {
-            duration: 0.3,
-            ease: "easeOut",
-          },
-        }}
+        variants={revealInViewMotion(0)}
+        initial="hidden"
+        whileInView="visible"
         className="sm:col-start-2 flex flex-col gap-4 justify-center "
       >
         <div className="w-fit">

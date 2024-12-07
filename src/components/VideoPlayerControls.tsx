@@ -48,7 +48,7 @@ const VideoPlayerControls: React.FC<VideoPlayerControlsProps> = ({
             cy={center}
             r={radius}
             fill="transparent"
-            stroke="#aaaaaa"
+            stroke="rgba(255, 255, 255, 0.3)"
             strokeWidth={width}
           />
           <circle

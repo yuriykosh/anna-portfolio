@@ -1,4 +1,5 @@
 import * as motion from "framer-motion/client";
+import { revealInViewMotion } from "@/utils/animations";
 
 const AboutSection = () => {
   return (
@@ -7,14 +8,9 @@ const AboutSection = () => {
       className="flex items-center justify-center w-full h-full"
     >
       <motion.h2
-        initial={{ opacity: 0 }}
-        whileInView={{
-          opacity: 1,
-          transition: {
-            duration: 0.3,
-            ease: "easeOut",
-          },
-        }}
+        variants={revealInViewMotion(0)}
+        initial="hidden"
+        whileInView="visible"
         className=""
       >
         About me
