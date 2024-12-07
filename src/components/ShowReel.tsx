@@ -57,7 +57,7 @@ const ShowReel = () => {
 
   return (
     <section className="relative w-full h-full">
-      <div className="absolute top-4 right-4 flex gap-2 justify-end z-10">
+      <div className="absolute top-4 right-4 flex gap-2 justify-end z-10 mix-blend-difference">
         <VideoPlayerControls
           progress={videoProgress}
           isPaused={isPaused}
