@@ -4,6 +4,7 @@ import { revealInViewMotion } from "@/utils/animations";
 import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
 import ShowReel from "@/components/ShowReel";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -13,17 +14,18 @@ export default function Home() {
           variants={revealInViewMotion(0)}
           initial="hidden"
           whileInView="visible"
-          className="min-h-[100svh] pt-[236px] sm:pt-[200px] snap-start snap-always"
+          className="min-h-[100svh] pt-[246px] sm:pt-52 snap-start snap-always"
         >
           <ShowReel />
         </motion.li>
 
-        <li className="min-h-[calc(100svh-236px)] sm:min-h-[calc(100vh-200px)] snap-start scroll-mt-[236px] sm:scroll-mt-[200px] snap-always">
+        <li className="min-h-[calc(100svh-246px)] sm:min-h-[calc(100vh-208px)] snap-start scroll-mt-[246px] sm:scroll-mt-[208px] snap-always">
           <AboutSection />
         </li>
 
-        <li className="min-h-[calc(100svh-236px)] sm:min-h-[calc(100vh-200px)] snap-start scroll-mt-[236px] sm:scroll-mt-[200px] snap-always">
+        <li className="relative min-h-[calc(100svh-246px)] sm:min-h-[calc(100vh-208px)] snap-start scroll-mt-[246px] sm:scroll-mt-[208px] snap-always">
           <ContactSection />
+          <Footer />
         </li>
       </ul>
     </main>
