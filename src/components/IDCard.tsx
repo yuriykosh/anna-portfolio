@@ -21,21 +21,23 @@ const IDCard = () => {
           />
         </div>
 
-        <div className="flex flex-col gap-2 sm:pt-1.5 text-xs text-gray-500 z-10 pointer-events-auto">
+        <div className="flex flex-col gap-2 sm:pt-1.5 text-xs text-gray-500 z-10">
           <div className="flex flex-col gap-0.5">
-            <p className="text-sm font-medium text-background">Anna Seheda</p>
+            <p className="text-sm font-medium text-background pointer-events-auto">
+              Anna Seheda
+            </p>
             <ul className="flex gap-2 italic">
               {tags.map((tag, i) => (
                 <li
                   key={i}
-                  className="flex items-center gap-2 after:w-1 after:h-1 after:bg-gray-400 after:rounded-full after:border-[0.5px] after:border-gray-300 last:after:hidden"
+                  className="flex items-center gap-2 after:w-1 after:h-1 after:bg-gray-400 after:rounded-full after:border-[0.5px] after:border-gray-300 last:after:hidden pointer-events-auto"
                 >
                   {tag}
                 </li>
               ))}
             </ul>
           </div>
-          <p>
+          <p className="pointer-events-auto">
             Bringing ideas to life through dynamic motion graphics and immersive
             3D designs.
           </p>

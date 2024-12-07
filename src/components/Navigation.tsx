@@ -19,7 +19,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="flex justify-between py-8 sm:flex-col sm:py-0">
+    <nav className="flex justify-between pt-2 pb-6 sm:flex-col sm:py-0">
       <Link
         href="/"
         onClick={handleHomeClick}
@@ -27,7 +27,7 @@ const Navigation = () => {
       >
         <GameIconsAmmonite />
       </Link>
-      <ul className="flex flex-col gap-4 text-sm text-right pointer-events-auto">
+      <ul className="hidden md:flex flex-col gap-4 text-sm text-right pointer-events-auto">
         <li className="pr-1">
           <Link href="/#about">About me</Link>
         </li>
