@@ -19,15 +19,15 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="flex justify-between py-8 sm:flex-col sm:py-0 pointer-events-auto">
+    <nav className="flex justify-between py-8 sm:flex-col sm:py-0">
       <Link
         href="/"
         onClick={handleHomeClick}
-        className="w-10 h-10 p-0.5 sm:w-16 sm:h-16 sm:p-1"
+        className="w-10 h-10 p-0.5 sm:w-16 sm:h-16 sm:p-1 pointer-events-auto"
       >
         <GameIconsAmmonite />
       </Link>
-      <ul className="flex flex-col gap-4 text-sm text-right">
+      <ul className="flex flex-col gap-4 text-sm text-right pointer-events-auto">
         <li className="pr-1">
           <Link href="/#about">About me</Link>
         </li>
