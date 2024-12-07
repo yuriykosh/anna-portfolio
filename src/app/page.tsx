@@ -22,33 +22,13 @@ export default function Home() {
           <ShowReel />
         </motion.li>
 
-        <motion.li
-          initial={{ opacity: 0 }}
-          whileInView={{
-            opacity: 1,
-            transition: {
-              duration: 0.3,
-              ease: "easeOut",
-            },
-          }}
-          className="min-h-[calc(100svh-236px)] sm:min-h-[calc(100vh-200px)] snap-start scroll-mt-[236px] sm:scroll-mt-[200px] snap-always"
-        >
+        <li className="min-h-[calc(100svh-236px)] sm:min-h-[calc(100vh-200px)] snap-start scroll-mt-[236px] sm:scroll-mt-[200px] snap-always">
           <AboutSection />
-        </motion.li>
+        </li>
 
-        <motion.li
-          initial={{ opacity: 0 }}
-          whileInView={{
-            opacity: 1,
-            transition: {
-              duration: 0.3,
-              ease: "easeOut",
-            },
-          }}
-          className="min-h-[calc(100svh-236px)] sm:min-h-[calc(100vh-200px)] snap-start scroll-mt-[236px] sm:scroll-mt-[200px] snap-always"
-        >
+        <li className="min-h-[calc(100svh-236px)] sm:min-h-[calc(100vh-200px)] snap-start scroll-mt-[236px] sm:scroll-mt-[200px] snap-always">
           <ContactSection />
-        </motion.li>
+        </li>
       </ul>
     </main>
   );
