@@ -3,10 +3,16 @@
 import { useEffect, useRef, useState } from "react";
 import VideoPlayerControls from "./VideoPlayerControls";
 
+interface FullscreenVideoElement extends HTMLVideoElement {
+  webkitRequestFullscreen?: () => Promise<void>;
+  mozRequestFullScreen?: () => Promise<void>;
+  msRequestFullscreen?: () => Promise<void>;
+}
+
 const ShowReel = () => {
   const [isPaused, setIsPaused] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
-  const videoRef = useRef<HTMLVideoElement>(null);
+  const videoRef = useRef<FullscreenVideoElement>(null);
   const [videoDuration, setVideoDuration] = useState<number>();
   const [videoProgress, setVideoProgress] = useState<number>(0);
 
@@ -55,15 +61,31 @@ const ShowReel = () => {
     }
   };
 
+  const toggleFullscreen = () => {
+    const video = videoRef.current;
+    if (video) {
+      if (video.requestFullscreen) {
+        video.requestFullscreen();
+      } else if (video.webkitRequestFullscreen) {
+        video.webkitRequestFullscreen(); // Safari
+      } else if (video.mozRequestFullScreen) {
+        video.mozRequestFullScreen(); // Firefox
+      } else if (video.msRequestFullscreen) {
+        video.msRequestFullscreen(); // IE/Edge
+      }
+    }
+  };
+
   return (
     <section className="relative w-full h-full">
-      <div className="absolute top-4 right-4 flex gap-2 justify-end z-10 mix-blend-difference">
+      <div className="absolute top-4 right-4 h-[calc(100%-32px)] flex flex-col gap-2 items-end justify-between z-10 mix-blend-difference">
         <VideoPlayerControls
           progress={videoProgress}
           isPaused={isPaused}
           onPlayPause={togglePlayPause}
           isMuted={isMuted}
           onMuteUnmute={toggleMute}
+          onFullscreen={toggleFullscreen}
         />
       </div>
       <video

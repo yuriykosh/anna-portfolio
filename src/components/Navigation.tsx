@@ -27,12 +27,22 @@ const Navigation = () => {
       >
         <GameIconsAmmonite />
       </Link>
-      <ul className="hidden md:flex flex-col gap-4 text-sm text-right pointer-events-auto">
+      <ul className="hidden md:flex flex-col gap-2 text-sm font-bold text-right pointer-events-auto">
         <li className="pr-1">
-          <Link href="/#about">About me</Link>
+          <Link
+            className="py-2 hover:underline underline-offset-2 hover:decoration-4"
+            href="/#about"
+          >
+            About me
+          </Link>
         </li>
         <li className="pr-1">
-          <Link href="/#contact">Contacts</Link>
+          <Link
+            className="py-2 hover:underline underline-offset-2 hover:decoration-4"
+            href="/#contact"
+          >
+            Contacts
+          </Link>
         </li>
       </ul>
     </nav>

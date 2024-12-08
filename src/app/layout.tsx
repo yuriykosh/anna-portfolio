@@ -11,6 +11,10 @@ const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
 });
+const pencerio = localFont({
+  src: "./fonts/Pencerio-Hairline.woff2",
+  variable: "--font-pencerio",
+});
 
 export const metadata: Metadata = {
   title: "Anna Seheda Portfolio",
@@ -25,10 +29,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
+        className={`${geistSans.variable} ${geistMono.variable} ${pencerio.variable} antialiased relative`}
       >
         <Header />
-
         {children}
       </body>
     </html>

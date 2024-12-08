@@ -9,6 +9,20 @@ const ContactSection = () => {
       id="contact"
       className="flex items-center justify-center sm:grid sm:grid-cols-2 w-full h-full bg-background"
     >
+      <div className="flex items-center justify-end p-12">
+        <div className="relative w-52 h-52 ">
+          <video
+            className="absolute object-cover object-center w-full h-full bg-white/10"
+            autoPlay
+            muted
+            playsInline
+            loop
+          >
+            <source src="/videos/spinnin-dog.mp4" type="video/mp4" />
+            Anna Seheda showreel.
+          </video>
+        </div>
+      </div>
       <motion.div
         variants={revealInViewMotion(0)}
         initial="hidden"

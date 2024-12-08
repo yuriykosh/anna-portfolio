@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <main className="w-full h-full">
-      <ul className="flex flex-col w-full h-[100svh] snap-y snap-mandatory overflow-y-auto">
+      <ul className="flex flex-col w-full min-h-[100svh] h-[100svh] max-h-[100svh] snap-y snap-mandatory overflow-y-auto">
         <motion.li
           variants={revealInViewMotion(0)}
           initial="hidden"
@@ -23,7 +23,7 @@ export default function Home() {
           <AboutSection />
         </li>
 
-        <li className="relative min-h-[calc(100svh-246px)] sm:min-h-[calc(100vh-208px)] snap-start scroll-mt-[246px] sm:scroll-mt-[208px] snap-always">
+        <li className="relative min-h-[calc(100svh-246px)] sm:min-h-[calc(100vh-208px)] snap-start scroll-mt-[246px] sm:scroll-mt-[208px] snap-always overflow-hidden">
           <ContactSection />
           <Footer />
         </li>
