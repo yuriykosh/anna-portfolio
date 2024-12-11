@@ -7,10 +7,10 @@ const ContactSection = () => {
   return (
     <section
       id="contact"
-      className="flex items-center justify-center sm:grid sm:grid-cols-2 w-full h-full bg-background"
+      className="flex flex-col items-center py-6 px-2 gap-6 sm:grid sm:grid-cols-2 sm:p-6 w-full h-full bg-background"
     >
-      <div className="flex items-center justify-end p-12">
-        <div className="relative w-52 h-52 ">
+      <div className="flex items-center justify-end ">
+        <div className="relative w-48 h-48 sm:w-52 sm:h-52 ">
           <video
             className="absolute object-cover object-center w-full h-full bg-white/10"
             autoPlay
