@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { GameIconsAmmonite } from "./icons/Ammonite";
+import { GameIconsAmmonite } from "../icons/Ammonite";
 
 const Navigation = () => {
   const pathname = usePathname(); // Get the current pathname

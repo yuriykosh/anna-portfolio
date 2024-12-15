@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { easings } from "@/utils/animations";
 
 import { motion } from "framer-motion";
-import { GameIconsAmmonite } from "./icons/Ammonite";
+import { GameIconsAmmonite } from "../icons/Ammonite";
 
 const Preloader = () => {
   const [isVisible, setIsVisible] = useState(true);

@@ -1,11 +1,11 @@
 import * as motion from "framer-motion/client";
 import { revealMotion } from "@/utils/animations";
 
-import AboutSection from "@/components/AboutSection";
-import ContactSection from "@/components/ContactSection";
-import ShowReel from "@/components/ShowReel";
-import Footer from "@/components/Footer";
-import Preloader from "@/components/Preloader";
+import AboutSection from "@/components/index/AboutSection";
+import ContactSection from "@/components/index/ContactSection";
+import ShowReel from "@/components/assets/ShowReel";
+import Footer from "@/components/assets/Footer";
+import Preloader from "@/components/assets/Preloader";
 
 export default function Home() {
   return (

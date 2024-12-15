@@ -1,10 +1,10 @@
 "use client";
 
-import { CarbonMaximize } from "./icons/CarbonMaximize";
-import { CarbonPauseFilled } from "./icons/CarbonPauseFilled";
-import { CarbonPlayFilledAlt } from "./icons/CarbonPlayFilledAlt";
-import { CarbonVolumeMuteFilled } from "./icons/CarbonVolumeMuteFilled";
-import { CarbonVolumeUpFilled } from "./icons/CarbonVolumeUpFilled";
+import { CarbonMaximize } from "@/components/icons/CarbonMaximize";
+import { CarbonPauseFilled } from "@/components/icons/CarbonPauseFilled";
+import { CarbonPlayFilledAlt } from "@/components/icons/CarbonPlayFilledAlt";
+import { CarbonVolumeMuteFilled } from "@/components/icons/CarbonVolumeMuteFilled";
+import { CarbonVolumeUpFilled } from "@/components/icons/CarbonVolumeUpFilled";
 
 interface VideoPlayerControlsProps {
   progress: number;

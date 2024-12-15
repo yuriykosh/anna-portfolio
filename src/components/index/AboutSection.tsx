@@ -2,7 +2,7 @@
 // import { revealInViewMotion } from "@/utils/animations";
 
 import { portfolioList } from "@/utils/data";
-import Folder from "./Folder";
+import Folder from "@/components/assets/Folder";
 
 const AboutSection = () => {
   return (
