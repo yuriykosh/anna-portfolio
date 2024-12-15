@@ -1,5 +1,5 @@
 import * as motion from "framer-motion/client";
-import { easings, revealMotion } from "@/utils/animations";
+import { revealMotion } from "@/utils/animations";
 
 import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
