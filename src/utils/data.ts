@@ -31,3 +31,24 @@ export const portfolioList = [
     ],
   },
 ];
+
+export const contactData = [
+  {
+    type: "Email",
+    contact: ["anyaa.segeda@gmail.com"],
+    link: ["mailto:anyaa.segeda@gmail.com"],
+  },
+  {
+    type: "Telegram",
+    contact: ["@anna_sehedaa"],
+    link: ["https://t.me/anna_sehedaa"],
+  },
+  {
+    type: "Instagram",
+    contact: ["@seheda_anya", "@sehedanna"],
+    link: [
+      "https://www.instagram.com/seheda_anya",
+      "https://www.instagram.com/sehedanna",
+    ],
+  },
+];

@@ -6,6 +6,10 @@ import { GameIconsAmmonite } from "@/components/icons/Ammonite";
 
 const Navigation = () => {
   const pathname = usePathname(); // Get the current pathname
+  const anchors = [
+    { title: "About me", url: "/#about" },
+    { title: "Contacts", url: "/#contact" },
+  ];
 
   const handleHomeClick = (e: { preventDefault: () => void }) => {
     if (pathname === "/") {
@@ -19,7 +23,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="flex justify-between pt-2 pb-6 sm:flex-col sm:py-0">
+    <nav className="flex items-end justify-between pt-2 pb-6 sm:flex-col sm:py-0">
       <Link
         href="/"
         onClick={handleHomeClick}
@@ -27,23 +31,19 @@ const Navigation = () => {
       >
         <GameIconsAmmonite />
       </Link>
+
       <ul className="hidden md:flex flex-col gap-2 text-sm font-bold text-right pointer-events-auto">
-        <li className="pr-1">
-          <Link
-            className="py-2 hover:underline underline-offset-2 hover:decoration-4"
-            href="/#about"
-          >
-            About me
-          </Link>
-        </li>
-        <li className="pr-1">
-          <Link
-            className="py-2 hover:underline underline-offset-2 hover:decoration-4"
-            href="/#contact"
-          >
-            Contacts
-          </Link>
-        </li>
+        {anchors.map((anchor, i) => (
+          <li key={i} className="pr-1">
+            <Link
+              href={anchor.url}
+              className="py-2 underline-offset-2 transition-all
+            hover:mr-2 hover:underline hover:decoration-4 focus:mr-2 focus:underline focus:decoration-4"
+            >
+              {anchor.title}
+            </Link>
+          </li>
+        ))}
       </ul>
     </nav>
   );
