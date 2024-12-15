@@ -14,7 +14,7 @@ export default {
       },
       fontFamily: {
         sans: ["var(--font-geist-sans)"],
-        mono: ["var(--font-geist-mono)"],
+        mono: ["var(--font-fliege-mono)"],
         pencerio: ["var(--font-pencerio)"],
       },
     },

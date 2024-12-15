@@ -10,7 +10,7 @@ const AboutSection = () => {
       id="about"
       className="flex flex-col sm:grid sm:grid-cols-2 w-full h-full gap-4 sm:gap-6 px-2 py-6 sm:p-6"
     >
-      <div className="flex flex-col max-sm:[@media(min-height:675px)]:grow gap-4 md:gap-6 xl:gap-8 sm:pt-4 text-xs sm:text-base xl:text-xl 2xl:text-2xl font-mono font-black sm:font-bold">
+      <div className="flex flex-col max-sm:[@media(min-height:675px)]:grow gap-4 md:gap-6 xl:gap-8 pt-2 sm:pt-4 text-xs sm:text-base xl:text-xl 2xl:text-2xl font-mono font-light">
         <h2 className="sr-only">About me</h2>
         <p>
           I&#39;m a passionate Motion and 3D Designer with a knack for creating
@@ -39,7 +39,7 @@ const AboutSection = () => {
             </li>
           ))}
         </ul>
-        <div className="flex flex-col gap-6 text-xs sm:text-sm lg:max-xl:[@media(min-height:880px)]:text-base xl:text-lg 2xl:text-xl font-mono font-bold">
+        <div className="flex flex-col gap-6 text-xs sm:text-sm lg:max-xl:[@media(min-height:880px)]:text-base xl:text-lg 2xl:text-xl font-mono font-light">
           <p className="[@media(max-height:675px)]:hidden">
             When I&#39;m not designing, you&#39;ll find me exploring the latest
             industry trends, experimenting with new tools, or drawing

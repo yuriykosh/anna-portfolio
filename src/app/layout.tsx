@@ -7,9 +7,9 @@ const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
+const fliegeMono = localFont({
+  src: "./fonts/FliegeMonoVF.woff2",
+  variable: "--font-fliege-mono",
 });
 const pencerio = localFont({
   src: "./fonts/Pencerio-Hairline.woff2",
@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${pencerio.variable} antialiased relative`}
+        className={`${geistSans.variable} ${fliegeMono.variable} ${pencerio.variable} antialiased relative`}
       >
         <Header />
         {children}
