@@ -1,15 +1,21 @@
+import Link from "next/link";
+
 interface FolderProps {
   name?: string;
   tags?: string | string[];
+  url: string;
   color?: string;
 }
 
-const Folder: React.FC<FolderProps> = ({ name, tags }) => {
+const Folder: React.FC<FolderProps> = ({ name, tags, url }) => {
   const tagsArray = Array.isArray(tags) ? tags : tags ? [tags] : [];
 
   return (
     <>
-      <div className="relative group/folder w-[100px] h-[100px] sm:w-[200px] sm:h-[200px] rounded-md overflow-hidden">
+      <Link
+        href={url}
+        className="relative group/folder w-[100px] h-[100px] md:w-[150px] md:h-[150px] lg:w-[200px] lg:h-[200px] rounded-md overflow-hidden"
+      >
         {/* -- back-cover -- */}
         <svg
           // width="200"
@@ -19,7 +25,9 @@ const Folder: React.FC<FolderProps> = ({ name, tags }) => {
           xmlns="http://www.w3.org/2000/svg"
           className="absolute left-0
           w-[100px] h-[68px] bottom-[8.5px]
-          sm:w-[200px] sm:h-[136px] sm:bottom-[17px]"
+          md:w-[150px] md:h-[100px] md:bottom-[12px]
+          lg:w-[200px] lg:h-[136px] lg:bottom-[17px]
+          "
         >
           <mask id="path-1-inside-1_2811_4597" fill="white">
             <path
@@ -43,9 +51,10 @@ const Folder: React.FC<FolderProps> = ({ name, tags }) => {
 
         {/* -- back-file -- */}
         <div
-          className="absolute rounded-lg sm:rounded-xl bg-white border-[0.2px] border-black border-opacity-20
+          className="absolute rounded-lg lg:rounded-xl bg-white border-[0.2px] border-black border-opacity-20
           w-20 h-[50px] left-[2px] bottom-[21px] -rotate-[3deg] group-hover/folder:-translate-y-2 group-hover/folder:translate-x-px group-hover/folder:-rotate-[5deg]
-          sm:w-40 sm:h-[100px] sm:left-[5px] sm:bottom-[40.5px] sm:group-hover/folder:-translate-y-4 sm:group-hover/folder:-translate-x-0.5
+          md:w-[7.5rem] md:h-[75px] md:left-[5px] md:bottom-[28.5px] md:group-hover/folder:-translate-y-3 md:group-hover/folder:-translate-x-[1.5px]
+          lg:w-40 lg:h-[100px] lg:left-[5px] lg:bottom-[40.5px] lg:group-hover/folder:-translate-y-4 lg:group-hover/folder:-translate-x-0.5
           group-hover/folder:transition-transform group-hover/folder:delay-[35ms] group-hover/folder:duration-300 group-hover/folder:ease-out
           transition-transform duration-200 ease-in-out
           "
@@ -53,9 +62,10 @@ const Folder: React.FC<FolderProps> = ({ name, tags }) => {
 
         {/* -- front-file -- */}
         <div
-          className="absolute rounded-lg sm:rounded-xl bg-white border-[0.2px] border-black border-opacity-20 
+          className="absolute rounded-lg lg:rounded-xl bg-white border-[0.2px] border-black border-opacity-20 
           w-20 h-[50px] right-[3px] bottom-[20.5px] rotate-[4deg] group-hover/folder:-translate-y-2.5 group-hover/folder:translate-x-px group-hover/folder:rotate-[8deg]
-          sm:w-40 sm:h-[100px] sm:right-[8px] sm:bottom-[40.5px] sm:group-hover/folder:-translate-y-5 sm:group-hover/folder:translate-x-0.5
+          md:w-[7.5rem] md:h-[75px] md:right-[6px] md:bottom-[28.5px] md:group-hover/folder:-translate-y-4 md:group-hover/folder:translate-x-[1.5px]
+          lg:w-40 lg:h-[100px] lg:right-[8px] lg:bottom-[40.5px] lg:group-hover/folder:-translate-y-5 lg:group-hover/folder:translate-x-0.5
           group-hover/folder:transition-transform group-hover/folder:delay-75 group-hover/folder:duration-300 group-hover/folder:ease-out
           transition-transform duration-200 ease-in-out
           "
@@ -66,10 +76,11 @@ const Folder: React.FC<FolderProps> = ({ name, tags }) => {
           viewBox="0 0 200 124"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="absolute -bottom-px sm:-bottom-[2px] left-0
+          className="absolute -bottom-px md:-bottom-[1.5px] lg:-bottom-[2px] left-0
           w-[100px] h-[62px] group-hover/folder:translate-y-[15px]
-          sm:w-[200px] sm:h-[124px] sm:group-hover/folder:translate-y-[30px]
-           group-hover/folder:transition-transform group-hover/folder:duration-300 group-hover/folder:ease-out
+          md:w-[150px] md:h-[93px] md:group-hover/folder:translate-y-[20px]
+          lg:w-[200px] lg:h-[124px] lg:group-hover/folder:translate-y-[30px]
+          group-hover/folder:transition-transform group-hover/folder:duration-300 group-hover/folder:ease-out
           transition-transform duration-200 ease-[cubic-bezier(.45,1.45,.8,1)]
         "
         >
@@ -95,24 +106,24 @@ const Folder: React.FC<FolderProps> = ({ name, tags }) => {
         </svg>
 
         {/* -- info -- */}
-        <div className="absolute bottom-0 left-0 w-full h-fit px-3 sm:px-4 py-2.5 sm:py-3">
+        <div className="absolute bottom-0 left-0 w-full h-fit px-3 md:px-4 py-2.5 md:py-3">
           {tags ? (
-            <ul className="flex gap-1 sm:gap-1.5 text-[6px] sm:text-xs font-mono text-black/30 transition-all duration-150 ease-out group-hover/folder:text-black/15">
+            <ul className="flex gap-1 md:gap-1.5 text-[6px] md:text-xs font-mono text-black/30 transition-all duration-150 ease-out group-hover/folder:text-black/15">
               {tagsArray.map((tag, i) => (
                 <li
                   key={i}
-                  className="inline-flex gap-1 sm:gap-1.5 after:block after:w-[0.4ch] after:h-[0.4ch] after:self-center after:rounded-full after:bg-black/30 after:transition-all after:duration-150 after:ease-out after:group-hover/folder:bg-black/15 last:after:hidden"
+                  className="inline-flex gap-1 md:gap-1.5 after:block after:w-[0.4ch] after:h-[0.4ch] after:self-center after:rounded-full after:bg-black/30 after:transition-all after:duration-150 after:ease-out after:group-hover/folder:bg-black/15 last:after:hidden"
                 >
                   {tag}
                 </li>
               ))}
             </ul>
           ) : null}
-          <h3 className="text-[8px] sm:text-base font-medium">
+          <h3 className="text-[8px] md:text-base font-medium">
             {name || "Folder name"}
           </h3>
         </div>
-      </div>
+      </Link>
     </>
   );
 };
