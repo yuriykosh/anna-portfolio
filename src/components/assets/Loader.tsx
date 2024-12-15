@@ -1,4 +1,4 @@
-import { CarbonProgressBarRound } from "./icons/CarbonProgressBarRound";
+import { CarbonProgressBarRound } from "@/components/icons/CarbonProgressBarRound";
 
 interface LoaderProps {
   text?: string;

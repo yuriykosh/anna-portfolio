@@ -1,6 +1,6 @@
 import { portfolioList } from "@/utils/data";
 import PortfolioList from "@/components/category/PortfolioList";
-import GoBackButton from "@/components/GoBackButton";
+import GoBackButton from "@/components/assets/GoBackButton";
 
 interface CategoryPageProps {
   category: string;

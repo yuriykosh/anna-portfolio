@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { CarbonChevronLeft } from "./icons/CarbonChevronLeft";
+import { CarbonChevronLeft } from "@/components/icons/CarbonChevronLeft";
 
 export default function GoBackButton() {
   const router = useRouter();
