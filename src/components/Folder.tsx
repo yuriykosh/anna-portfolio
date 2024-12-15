@@ -14,7 +14,7 @@ const Folder: React.FC<FolderProps> = ({ name, tags, url }) => {
     <>
       <Link
         href={url}
-        className="relative group/folder w-[100px] h-[100px] md:w-[150px] md:h-[150px] lg:w-[200px] lg:h-[200px] rounded-md overflow-hidden"
+        className="relative group/folder w-[100px] h-[100px] md:w-[150px] md:h-[150px] xl:w-[200px] xl:h-[200px] rounded-md overflow-hidden"
       >
         {/* -- back-cover -- */}
         <svg
@@ -26,7 +26,7 @@ const Folder: React.FC<FolderProps> = ({ name, tags, url }) => {
           className="absolute left-0
           w-[100px] h-[68px] bottom-[8.5px]
           md:w-[150px] md:h-[100px] md:bottom-[12px]
-          lg:w-[200px] lg:h-[136px] lg:bottom-[17px]
+          xl:w-[200px] xl:h-[136px] xl:bottom-[17px]
           "
         >
           <mask id="path-1-inside-1_2811_4597" fill="white">
@@ -51,10 +51,10 @@ const Folder: React.FC<FolderProps> = ({ name, tags, url }) => {
 
         {/* -- back-file -- */}
         <div
-          className="absolute rounded-lg lg:rounded-xl bg-white border-[0.2px] border-black border-opacity-20
+          className="absolute rounded-lg xl:rounded-xl bg-white border-[0.2px] border-black border-opacity-20
           w-20 h-[50px] left-[2px] bottom-[21px] -rotate-[3deg] group-hover/folder:-translate-y-2 group-hover/folder:translate-x-px group-hover/folder:-rotate-[5deg]
           md:w-[7.5rem] md:h-[75px] md:left-[5px] md:bottom-[28.5px] md:group-hover/folder:-translate-y-3 md:group-hover/folder:-translate-x-[1.5px]
-          lg:w-40 lg:h-[100px] lg:left-[5px] lg:bottom-[40.5px] lg:group-hover/folder:-translate-y-4 lg:group-hover/folder:-translate-x-0.5
+          xl:w-40 xl:h-[100px] xl:left-[5px] xl:bottom-[40.5px] xl:group-hover/folder:-translate-y-4 xl:group-hover/folder:-translate-x-0.5
           group-hover/folder:transition-transform group-hover/folder:delay-[35ms] group-hover/folder:duration-300 group-hover/folder:ease-out
           transition-transform duration-200 ease-in-out
           "
@@ -62,10 +62,10 @@ const Folder: React.FC<FolderProps> = ({ name, tags, url }) => {
 
         {/* -- front-file -- */}
         <div
-          className="absolute rounded-lg lg:rounded-xl bg-white border-[0.2px] border-black border-opacity-20 
+          className="absolute rounded-lg xl:rounded-xl bg-white border-[0.2px] border-black border-opacity-20 
           w-20 h-[50px] right-[3px] bottom-[20.5px] rotate-[4deg] group-hover/folder:-translate-y-2.5 group-hover/folder:translate-x-px group-hover/folder:rotate-[8deg]
           md:w-[7.5rem] md:h-[75px] md:right-[6px] md:bottom-[28.5px] md:group-hover/folder:-translate-y-4 md:group-hover/folder:translate-x-[1.5px]
-          lg:w-40 lg:h-[100px] lg:right-[8px] lg:bottom-[40.5px] lg:group-hover/folder:-translate-y-5 lg:group-hover/folder:translate-x-0.5
+          xl:w-40 xl:h-[100px] xl:right-[8px] xl:bottom-[40.5px] xl:group-hover/folder:-translate-y-5 xl:group-hover/folder:translate-x-0.5
           group-hover/folder:transition-transform group-hover/folder:delay-75 group-hover/folder:duration-300 group-hover/folder:ease-out
           transition-transform duration-200 ease-in-out
           "
@@ -76,10 +76,10 @@ const Folder: React.FC<FolderProps> = ({ name, tags, url }) => {
           viewBox="0 0 200 124"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="absolute -bottom-px md:-bottom-[1.5px] lg:-bottom-[2px] left-0
+          className="absolute -bottom-px md:-bottom-[1.5px] xl:-bottom-[2px] left-0
           w-[100px] h-[62px] group-hover/folder:translate-y-[15px]
           md:w-[150px] md:h-[93px] md:group-hover/folder:translate-y-[20px]
-          lg:w-[200px] lg:h-[124px] lg:group-hover/folder:translate-y-[30px]
+          xl:w-[200px] xl:h-[124px] xl:group-hover/folder:translate-y-[30px]
           group-hover/folder:transition-transform group-hover/folder:duration-300 group-hover/folder:ease-out
           transition-transform duration-200 ease-[cubic-bezier(.45,1.45,.8,1)]
         "

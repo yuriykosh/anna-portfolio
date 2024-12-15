@@ -10,7 +10,7 @@ const AboutSection = () => {
       id="about"
       className="flex flex-col sm:grid sm:grid-cols-2 w-full h-full gap-4 sm:gap-6 px-2 py-6 sm:p-6"
     >
-      <div className="flex flex-col max-sm:[@media(min-height:675px)]:grow gap-4 md:gap-6 lg:gap-8 text-xs sm:text-base lg:text-xl xl:text-2xl font-mono font-black sm:font-bold">
+      <div className="flex flex-col max-sm:[@media(min-height:675px)]:grow gap-4 md:gap-6 xl:gap-8 sm:pt-4 text-xs sm:text-base xl:text-xl 2xl:text-2xl font-mono font-black sm:font-bold">
         <h2 className="sr-only">About me</h2>
         <p>
           I&#39;m a passionate Motion and 3D Designer with a knack for creating
@@ -28,18 +28,18 @@ const AboutSection = () => {
         <div className="[@media(max-height:675px)]:hidden w-full h-full bg-amber-100 border border-foreground"></div>
       </div>
 
-      <div className="flex flex-col h-fit gap-6 justify-between md:h-full md:-translate-y-6 lg:-translate-y-6">
-        <ul className="flex gap-4 px-2 sm:px-6 sm:flex-col md:gap-0 md:mx-auto lg:mx-0 lg:gap-4 max-lg:justify-around lg:grid lg:grid-cols-2 lg:max-xl:[@media(min-height:1024px)]:grid-cols-1">
+      <div className="flex flex-col h-fit gap-6 justify-between sm:h-full md:-translate-y-6 lg:-translate-y-6">
+        <ul className="flex gap-4 px-2 sm:px-6 sm:flex-col md:gap-0 md:mx-auto lg:mx-0 lg:gap-4 max-lg:justify-around lg:grid lg:grid-cols-2 lg:max-xl:[@media(min-height:1080px)]:grid-cols-1">
           {portfolioList.map((item, i) => (
             <li
               key={i}
-              className=" sm:w-fit sm:h-fit flex sm:items-center sm:justify-center lg:max-xl:[@media(min-height:1024px)]:mx-auto overflow-visible"
+              className=" sm:w-fit sm:h-fit flex sm:items-center sm:justify-center lg:max-xl:[@media(min-height:1080px)]:mx-auto overflow-visible"
             >
               <Folder tags={item.tags} name={item.category} url={item.page} />
             </li>
           ))}
         </ul>
-        <div className="flex flex-col gap-6 text-xs sm:text-sm lg:text-lg lg:max-xl:[@media(min-height:1024px)]:text-xl lg:max-xl:[@media(min-height:1024px)]:gap-12 xl:text-xl font-mono font-bold">
+        <div className="flex flex-col gap-6 text-xs sm:text-sm lg:max-xl:[@media(min-height:880px)]:text-base xl:text-lg 2xl:text-xl font-mono font-bold">
           <p className="[@media(max-height:675px)]:hidden">
             When I&#39;m not designing, you&#39;ll find me exploring the latest
             industry trends, experimenting with new tools, or drawing
